@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class B_Shooter2 : MonoBehaviour {
 
-    public int Charged { get; set; }
+    private int Charged = 1;
+
     public bool OnCooldown { get; set; }
     public float cooldownTime;
-    Transform transform;
     public Transform origin;
     public GameObject bullet;
+
     GameObject shot;
+    Transform transform;
+    SpriteRenderer sRenderer;
+
+
+
+    private int i = 0;
+
     // Use this for initialization
     void Start()
     {
         this.OnCooldown = false;
-        this.Charged = 1;
         transform = gameObject.GetComponent<Transform>();
+        sRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -27,17 +35,20 @@ public class B_Shooter2 : MonoBehaviour {
             this.OnCooldown = true;
             shot = Fire();
             this.Charged -= 1;
+            sRenderer.color = Color.red;
             StartCoroutine(Cooldown());
         }
         else if (Input.GetButtonDown("Fire2") && this.OnCooldown == false)
         {
             Recover();
+            sRenderer.color = Color.grey;
         }
     }
     IEnumerator Cooldown()
     {
         yield return new WaitForSeconds(cooldownTime);
         this.OnCooldown = false;
+        sRenderer.color = Color.green;
     }
 
     void Recover()

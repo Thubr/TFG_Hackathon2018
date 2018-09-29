@@ -141,6 +141,8 @@ MonoBehaviour:
   cooldownTime: 2
   origin: {fileID: 4129692989063610}
   bullet: {fileID: 1447701898682230, guid: 3d8d4d32cbd258f459c7d9008b391864, type: 2}
+  firefx: {fileID: 8300000, guid: 107aba75a48b6404a9f3f468bad76bbb, type: 3}
+  recoverfx: {fileID: 8300000, guid: d65000deea4348d4bb376a083e857c02, type: 3}
 --- !u!114 &114696522902227272
 MonoBehaviour:
   m_ObjectHideFlags: 1

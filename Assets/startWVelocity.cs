@@ -15,6 +15,6 @@ public class startWVelocity : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        rb.velocity = v * (rb.velocity.normalized);
+    }
 }
