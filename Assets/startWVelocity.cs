@@ -9,6 +9,7 @@ public class startWVelocity : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        
         rb.velocity = transform.right*v;
 	}
 	
