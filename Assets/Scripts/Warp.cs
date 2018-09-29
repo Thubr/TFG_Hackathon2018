@@ -2,7 +2,7 @@
 
 public class Warp : MonoBehaviour 
 {
-	public Transform Player;
+	public GameObject Player;
 
 	Camera cam;
 	
@@ -19,7 +19,8 @@ public class Warp : MonoBehaviour
 	{
 		for(int i = 0; i < 8; i++)
 		{
-			ghosts[i] = Instantiate(Player);
+			var x = Instantiate(Player) as GameObject;
+			ghosts[i] = x.transform;
 	
 		}
 	}
@@ -28,10 +29,13 @@ public class Warp : MonoBehaviour
 	{
 		cam = Camera.main;
 		screenBottomLeft = cam.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z));
-		screenTopRight = cam.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z));
+		screenTopRight = cam.ViewportToWorldPoint(new Vector3(1, 1, transform.position.z));
 		screenWidth = screenTopRight.x - screenBottomLeft.x;
 		screenHeight = screenTopRight.y - screenBottomLeft.y;
-		CreateGhostShips();	
+		Debug.Log(screenWidth);
+		Debug.Log(screenHeight);
+		CreateGhostShips();
+		PositionGhostShips();
 	}
 	
 
@@ -41,6 +45,7 @@ public class Warp : MonoBehaviour
 		// so let's star with that.
 		Vector3 ghostPosition = transform.position;
 	
+
 		// We're positioning the ghosts clockwise behind the edges of the screen.
 		// Let's start with the far right.
 		ghostPosition.x = transform.position.x + screenWidth;

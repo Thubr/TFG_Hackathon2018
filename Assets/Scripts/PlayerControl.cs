@@ -22,7 +22,7 @@ public class PlayerControl : MonoBehaviour {
 
     void FixedUpdate()
     {
-        bool fire = Input.GetButton("Jump");
+        bool fire = Input.GetButtonDown("Jump");
         bool clockwise = Input.GetKey("l");
         bool antiClockwise = Input.GetKey("j");
 
@@ -37,8 +37,8 @@ public class PlayerControl : MonoBehaviour {
         }
 
         if (fire)
-        {       
-            rb2D.AddForce(transform.right * -speed);
+        {   
+            rb2D.AddForce(transform.right * (-2.5f) * speed, ForceMode2D.Impulse);
         }
         
     }

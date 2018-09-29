@@ -234,6 +234,31 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 32681a4c6f2b2dc4db82e680cf7c9be7, type: 2}
+    - target: {fileID: 212832757968028338, guid: f3ca1ee51ef1e4f4db70a87520cadc9a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 212832757968028338, guid: f3ca1ee51ef1e4f4db70a87520cadc9a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212832757968028338, guid: f3ca1ee51ef1e4f4db70a87520cadc9a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50153517009056602, guid: f3ca1ee51ef1e4f4db70a87520cadc9a,
+        type: 2}
+      propertyPath: m_Mass
+      value: 4.9087386
+      objectReference: {fileID: 0}
+    - target: {fileID: 50153517009056602, guid: f3ca1ee51ef1e4f4db70a87520cadc9a,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3ca1ee51ef1e4f4db70a87520cadc9a, type: 2}
   m_IsPrefabAsset: 0
@@ -242,23 +267,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1088599466919064, guid: f3ca1ee51ef1e4f4db70a87520cadc9a,
     type: 2}
   m_PrefabInternal: {fileID: 951877805}
---- !u!4 &951877807 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4473016823887002, guid: f3ca1ee51ef1e4f4db70a87520cadc9a,
-    type: 2}
-  m_PrefabInternal: {fileID: 951877805}
 --- !u!114 &951877808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 951877806}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73ae052eae5078b459726ac87fd36413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 951877807}
+  Player: {fileID: 1088599466919064, guid: f3ca1ee51ef1e4f4db70a87520cadc9a, type: 2}
 --- !u!1 &1120432703
 GameObject:
   m_ObjectHideFlags: 0
